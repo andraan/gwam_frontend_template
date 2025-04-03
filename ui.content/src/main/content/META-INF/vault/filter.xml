@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/gwam-aem-frontend-template" mode="merge"/>
+    <filter root="/content/gwam-aem-frontend-template" mode="merge"/>
+    <filter root="/content/dam/gwam-aem-frontend-template" mode="merge">
+        <exclude pattern="/content/dam/gwam-aem-frontend-template(/.*)?"/>
+        <include pattern="/content/dam/gwam-aem-frontend-template/jcr:content(/.*)?"/>
+    </filter>
+    <filter root="/content/dam/gwam-aem-frontend-template/asset.jpg" mode="merge"/>
+    <filter root="/content/experience-fragments/gwam-aem-frontend-template" mode="merge"/>
+</workspaceFilter>

@@ -1,0 +1,12 @@
+@use "../../styles/mixins" as *;
+
+.container {
+  font-family: system-ui;
+  background-color: #0070d9;
+  color: white;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+
+  @include flex-center;
+}

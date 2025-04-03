@@ -1,0 +1,22 @@
+.container {
+    background-color: white;
+    border: none;
+    color: #0070d9;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 1rem;
+    padding: 10px;
+    text-align: center;
+    transition: background-color 0.3s ease-in-out;
+
+    &:focus,
+    &:hover {
+        background-color: #0053a0;
+        color: white;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+        outline: none;
+        box-shadow: none;
+    }
+
+}

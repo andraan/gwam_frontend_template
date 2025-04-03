@@ -1,0 +1,7 @@
+{
+    "scripts": [
+        "create path (sling:OrderedFolder) /content/dam/gwam-aem-frontend-template",
+        "create path (nt:unstructured) /content/dam/gwam-aem-frontend-template/jcr:content",
+        "set properties on /content/dam/gwam-aem-frontend-template/jcr:content\n  set cq:conf{String} to /conf/gwam-aem-frontend-template\n  set jcr:title{String} to \"GWAM AEM Frontend template\"\nend"
+    ]
+}
