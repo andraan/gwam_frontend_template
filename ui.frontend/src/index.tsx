@@ -1,5 +1,11 @@
 import { createRoot } from "react-dom/client";
 
+declare global {
+  interface Window {
+    propsTemplate?: any;
+  }
+}
+
 import Button from "./components/Button";
 import Image from "./components/Image";
 import Container from "./components/Container";
@@ -10,10 +16,16 @@ const container: HTMLElement = document.getElementById(
 ) as HTMLElement;
 const root = createRoot(container);
 
-root.render(
-  <Container>
-    <h1 className="title">GWAM React template - modified</h1>
-    <Image />
-    <Button />
-  </Container>
-);
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("DOM fully loaded and parsed");
+  console.log("window.propsTemplate: ", window?.propsTemplate);
+  root.render(
+    <Container>
+      <h1 className="title">
+        GWAM React template: {window?.propsTemplate?.property1}
+      </h1>
+      <Image />
+      <Button />
+    </Container>
+  );
+});

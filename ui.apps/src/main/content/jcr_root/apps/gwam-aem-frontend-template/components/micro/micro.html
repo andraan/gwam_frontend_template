@@ -1,14 +1,20 @@
-<!-- <div class="cq-placeholder" data-sly-test="${wcmmode.edit}" data-emptytext="GWAM AEM template frontend"></div> -->
+<div class="cq-placeholder" data-sly-test="${wcmmode.edit}" data-emptytext="GWAM AEM template frontend"></div>
 
-<head>
-    <link rel="stylesheet"
-        href="/etc.clientlibs/gwam-aem-frontend-template/clientlibs/clientlib-gwam-aem-frontend-template.css"
-        type="text/css">
-</head>
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.css @ categories='gwam-aem-frontend-template.react'}" />
+</sly>
+
 <section>
     <div id="spa-root"></div>
-    <script src="/etc.clientlibs/gwam-aem-frontend-template/clientlibs/clientlib-gwam-aem-frontend-template.js"></script>
 </section>
-<script>
-    console.log("INJECT HERE");
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.js @ categories='gwam-aem-frontend-template.react'}" />
+</sly>
+
+<script type="text/javascript">
+    window.propsTemplate = {
+        property1: "${properties.property1 @ context='text'}",
+        property2: "${properties.property2 @ context='text'}"
+    };
 </script>
