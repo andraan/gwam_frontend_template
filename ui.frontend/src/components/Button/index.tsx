@@ -6,7 +6,12 @@ const Button = () => {
   };
 
   return (
-    <button className={styles.container} onClick={handleClick}>
+    <button
+      type="button"
+      className={styles.container}
+      onClick={handleClick}
+      title="Click me!"
+    >
       Click me!
     </button>
   );

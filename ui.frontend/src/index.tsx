@@ -1,11 +1,4 @@
 import { createRoot } from "react-dom/client";
-
-declare global {
-  interface Window {
-    propsTemplate?: any;
-  }
-}
-
 import Button from "./components/Button";
 import Image from "./components/Image";
 import Container from "./components/Container";
